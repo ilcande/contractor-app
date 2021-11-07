@@ -1,0 +1,8 @@
+<p><%= @payment_request.amount %></p>
+<p><%= @payment_request.currency %></p>
+<p><%= @payment_request.description %></p>
+<p><%= @payment_request.status %></p>
+
+<p><%= link_to "back to payment requests", contractor_payment_requests_path(@contractor.id, @payment_request.id) %></p>
+<br>
+<p><%= link_to "create payment request", new_contractor_payment_request_path %></p>

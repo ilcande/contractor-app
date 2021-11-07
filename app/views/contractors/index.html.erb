@@ -1,0 +1,8 @@
+<% @contractors.each do |contractor| %>
+  <%= link_to contractor_goals_path(contractor) do %>
+    <p><%= contractor.name %></p>
+    <p><%= link_to  "delete contractor", contractor_path(contractor), method: :delete, remote: true %></p>
+  <% end %>
+<% end %>
+<br>
+<%= link_to "create contractor", new_contractor_path %>

@@ -1,0 +1,8 @@
+<% @payment_requests.each do |payment_request| %>
+  <p><%= payment_request.amount %> - <%= payment_request.description %></p>
+  <%= link_to "view payment_request", contractor_payment_request_path(payment_request.contractor_id, payment_request.id) %>
+  <%= link_to  "Delete payment_request", contractor_payment_request_path(@contractor, payment_request.id), method: :delete, remote: true %>
+<% end %>
+<br>
+<br>
+<%= link_to "create payment_request", new_contractor_payment_request_path %>
