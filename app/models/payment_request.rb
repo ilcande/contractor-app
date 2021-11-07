@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PaymentRequest < ApplicationRecord
   belongs_to :contractor
   before_validation :set_pending_status

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PaymentRequestsController < ApplicationController
   before_action :find_contractor
   before_action :find_payment_request, only: %i[show edit update destroy]

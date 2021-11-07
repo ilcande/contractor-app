@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ContractorsController < ApplicationController
   before_action :find_contractor, only: %i[show edit update destroy]
 
